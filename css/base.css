@@ -288,7 +288,7 @@ body:lang(en) {
         /* display: none !important; */
     }
     .secondary-page .image-section img {
-        width: 140%; 
+        width: 100%; 
     }
     .box {
         top: 0 !important;
