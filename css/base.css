@@ -448,6 +448,38 @@ body:lang(en) {
     font-size: 20px; /* 较小的字号 */
 }
 
+.usage-hint {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border: 1.5px solid black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2000; /* 确保在最上层 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 38px;
+    cursor: pointer;
+    color: black;
+}
+
 /* 添加轮播相关样式 */
 /* .welcome-slider {
     position: fixed;
