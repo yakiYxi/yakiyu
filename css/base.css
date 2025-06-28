@@ -1,0 +1,565 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, 'Source Han Serif',sans-serif;
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+}
+body:lang(zh) {
+    font-family: 'Source Han Serif', Arial, sans-serif;
+}
+
+body:lang(en) {
+    font-family: Arial, 'Source Han Serif', sans-serif;
+}
+::selection {
+    background-color: rgba(25, 255, 33, 0.85);
+    color: #000; /* 可选：设置选中文本的颜色 */
+}
+
+.corner-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 429px; /* 395px * 0.7 */
+    height: 97px; /* 87px * 0.7 */
+    border-right: 1.5px solid #000;
+    border-bottom: 1.5px solid #000;
+    overflow: hidden;
+    background-color: #fff;
+    transition: all 0.3s ease; 
+    z-index: 2000;
+}
+.corner-box:hover,
+.corner-box:hover #logo-image {
+    transform: scale(1.08);
+    transition: transform 0.3s ease;
+    transform-origin: top left; 
+}
+.index-box {
+    position: fixed;
+    top: 97px; /* 87px * 0.7 */
+    left: 0;
+    width: 350px; /* Adjusted width */
+    height: 35px; /* 33px * 0.7 */
+    border-right: 1.5px solid #000;
+    border-bottom: 1.5px solid #000;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 7px; /* 10px * 0.7 */
+    font-size: 24px; /* 26px * 0.7 */
+    transition: all 0.3s ease; /* 添加过渡效果 */
+    z-index: 1006;
+}
+.index-box:hover {
+    font-size: 36px; /* 悬停时的字号 */
+    font-weight: bold; /* 将字体设置为粗体 */
+    height: 46px; /* 增加26px的高度 */
+    width: 360px;
+}
+.left-sidebar {
+    position: fixed;
+    top: 133px; /* 60.9px + 23.1px */
+    left: 0;
+    width: 350px; /* Adjusted width */
+    height: 898px; /* 942px * 0.7 */
+    border-right: 1.5px solid #000;
+    background-color: #fff;
+    padding: 14px; /* 20px * 0.7 */
+    box-sizing: border-box;
+    z-index: 1005;
+}
+.top-bar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 10px;
+    left: 429px; /* 395px * 0.7 */
+    z-index: 1999;
+}
+.info, .contact {
+    width: 1461px; /* Adjusted width */
+    height: 31px; /* 33px * 0.7 */
+    border-left: 1.5px solid #000;
+    border-bottom: 1.5px solid #000;
+    display: flex;
+    align-items: center;
+    padding-left: 6px; /* 10px * 0.7 */
+    font-size: 28px; /* 26px * 0.7 */
+    background-color: #fff;
+    transition: all 0.3s ease; /* 添加过渡效果 */
+}
+
+.info:hover {
+    font-size: 48px; /* 悬停时的字号 */
+    font-weight: bold; /* 将字体设置为粗体 */
+    height: 46px; /* 增加26px的高度 */
+}
+.contact:hover {
+    font-size: 48px; /* 悬停时的字号 */
+    font-weight: bold; /* 将字体设置为粗体 */
+    height: 46px; /* 增加26px的高度 */
+}
+.contact {
+    border-bottom: 1.5px solid #000;
+}
+.container {
+    position: absolute;
+    top: 72px; /* Adjusted margin */
+    left: 350px; /* Adjusted to be next to left sidebar */
+    width: calc(100% - 350px);
+    height: calc(100vh - 84px); /* Adjusted height */
+    /* display: flex;
+    flex-wrap: wrap; */
+    padding-left: 6px; /* 20px * 0.7 */
+    box-sizing: border-box;
+    overflow: auto; /* Allow scrolling */
+}
+/* .content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+} */
+.content {
+    width: 100%; 
+    margin: 0 auto;
+    max-width: 1200px;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 6px;
+    grid-auto-flow: dense;
+    align-items: start; */
+}
+
+/* .content {
+    column-count: 4;
+    column-gap: 16px;
+    padding: 0;
+}
+
+@media (max-width: 1200px) {
+    .content {
+        column-count: 3;
+    }
+}
+@media (max-width: 800px) {
+    .content {
+        column-count: 2;
+    }
+}
+@media (max-width: 500px) {
+    .content {
+        column-count: 1;
+    }
+} */
+
+
+.content img {
+    width: 270px; /* Fixed width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain;
+    align-self: flex-start; /* Align images to the top */
+    margin: 3px; /* Space between images */
+    margin-bottom: 40px;
+}
+.index-list {
+    margin-top: -14px;
+}
+.index-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: -6px;
+    margin-right: -6px;
+    font-size: 24px; /* 21px * 0.7 */
+    line-height: 1;
+}
+.index-list li {
+    /* margin-bottom: 4px;  */
+    transition: all 0.1s ease; /* 添加过渡效果 */
+}
+.index-list li:hover {
+    color: #fff;
+}
+.hidden {
+    display: none;
+}
+.secondary-page {
+    position: absolute;
+    top: 72px; /* Adjusted margin */
+    /* left: 318px;  */
+    width: calc(100% - 338px); /* 确保不会超过左边栏的右边界 */
+    height: calc(100vh - 84px);
+    background: rgba(255, 255, 255, 1);
+    display: none;
+    /* justify-content: center;
+    align-items: center; */
+    font-size: 18px;
+    overflow: hidden; /* Allow scrolling */
+    z-index: 1000;
+}
+
+.secondary-page .image-section img {
+    width: 817.4px;
+    height: auto;
+    margin-bottom: 20px;
+    object-fit: contain;
+
+}
+
+.secondary-page .text {
+    width: 50%;
+    overflow-y: scroll; /* 只允许纵向滚动 */
+    padding: 20px;
+    transform: none; 
+}
+
+@media (max-width: 1520px) and (min-width: 941px) {
+    .secondary-page .image-section img {
+        width: 80%; 
+    }
+}
+@media (max-width: 941px) {
+    .corner-box, .index-box, .left-sidebar, .top-bar .info, .top-bar .contact, .container {
+        transform: scale(calc(1 - ((1020px - 100vw) / 1000)));
+        transform-origin: top left;
+    }
+}
+@media (max-width: 740px) {
+    /* 1. info 栏固定在 corner-box 下面 */
+    .info {
+        position: fixed;
+        top: 97px;                /* corner-box 的高度 */
+        left: 0;                  /* 紧贴页面左边缘 */
+        width: 400px;              /* 根据需要也可以改成原来的宽度 */
+        display: flex;
+        border-right: 1.5px solid #000;
+        z-index: 1000;
+    }
+
+    /* 2. contact 栏固定在 info 下面 */
+    .contact {
+        position: fixed;
+        top: calc(97px + 32.5px);   /* corner-box 高度 + info 高度 */
+        left: 0;
+        width: 400px;
+        display: flex;
+        border-right: 1.5px solid #000;
+        z-index: 999;
+    }
+
+    /* 3. index-box 固定在 contact 下面 */
+    .index-box {
+        position: fixed;
+        top: 162px; 
+        left: 0;
+        width: 350px;                /* 或者保持原来的 350px，根据布局调整 */
+        z-index: 998;
+        border-right: 1.5px solid #000;
+        border-left: 1.5px solid #000;
+    }
+    .left-sidebar {
+        position: fixed; /* 保持固定定位 */
+        top: 198px; /* corner-box + info + contact */
+        left: 5px;
+        width: 340px;
+        height: calc(100vh - 97px - 33px * 2); /* 页面高度减去 header 的高度 */
+        background-color: #fff; /* 确保有背景色 */
+        z-index: 997; /* 保证在 container 和二级页面上层 */
+        border-right: 1.5px solid #000;
+        border-left: 1.5px solid #000;
+        display: none; 
+        overflow-y: scroll; 
+    }
+
+    .container {
+        position: fixed;
+        top: 198.5px;
+        left: 0;
+        width: 100vw; /* 填充屏幕宽度 */
+        z-index: 1;  /* 确保它在 secondary-page 下面 */
+    }
+    .secondary-page {
+        position: fixed !important;
+        top: 198.5px !important;
+        left: 0 !important;
+        width: 100vw !important;
+        z-index: 2 !important;
+        /* display: none !important; */
+    }
+    .secondary-page .image-section img {
+        width: 140%; 
+    }
+    .box {
+        top: 0 !important;
+        left: 0 !important;
+    }
+    #info-box {
+        position: fixed !important;
+        top: 129.5px !important;
+        left: 44px !important;
+    }
+    #contact-box {
+        position: fixed !important;
+        top: 162px !important;
+        left: 18px !important;
+
+    }
+}
+
+
+.secondary-page {
+    position: relative;
+    left: 318px; /* 确保二级页面与左边栏对齐 */
+    width: 100vw; /* 确保二级页面宽度为整个视口宽度 */
+    height: calc(100vh - 84px);
+    overflow-x: auto; 
+}
+.secondary-page .image-section {
+    padding-left: 318px; /* 保持与左边栏对齐 */
+    /* transform: scale(0.45); */
+    width: 45%;
+    width: calc(100vw - 318px); /* 调整宽度以确保内容对齐 */
+    overflow-y: auto; 
+    overflow-x: visible; 
+}
+.secondary-page .image-section img {
+    /* transform: scale(0.6); */
+    transition: transform 0.1s ease;
+    
+}
+
+.secondary-page .image-section {
+    width: 1269px;
+    height: 100%;
+    overflow-y: scroll; 
+    padding: 10px; /* 增加内边距，避免图片被遮挡 */
+    box-sizing: border-box; /* 确保内边距不影响容器的实际大小 */
+    transform: none; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+.secondary-page .text-section {
+    width: 141px;
+    height: 100%;
+    margin-right: 10px;
+    overflow-y: scroll; 
+    /* box-sizing: border-box; */
+    transform: none; 
+    transition: transform 0.3s ease;
+}
+.box {
+    position: fixed;
+    top: 84px;
+    left: 204.8px;
+    display: none;
+    z-index: 1001;
+}
+#info-box {
+    position: absolute;
+    top: 75px;
+    left: 394px;
+    width: 328px;
+    height: 410px;
+    background-color: #b4fffd;
+    font-size: 21px;
+    padding-top: 50px;
+    padding-left: 12px;
+    padding-right: 6px;
+    z-index: 1002;
+}
+#contact-box {
+    position: absolute;
+    top: 75px;
+    left: 368px;
+    width: 420px;
+    height: 120px;
+    background-color: #fffb7d;
+    padding-top: 110px;
+    padding-left: 12px;
+    padding-right: 6px;
+    padding-bottom: 4px;
+    font-size: 21px;
+    z-index: 1003; 
+}
+#logo-image {
+    position: fixed;
+    width: 1728px;
+    height: 1028px;
+    top: 0;
+    left: 0;
+    z-index: 2001;
+    pointer-events: none;
+    transition: all 0.3s ease; 
+}
+
+
+.image-container {
+    width: 270px;
+    margin-bottom: 0px;
+    display: block;
+}
+
+.image-container img {
+    width: 270px; /* 固定宽度 */
+    height: auto; /* 保持宽高比 */
+    object-fit: contain;
+    transition: filter 0.3s ease; /* 添加过渡效果 */
+    display: block;
+}
+
+.image-container:hover img {
+    opacity: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* 纯白色背景 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.6s ease; /* 添加过渡效果 */
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+.large-text {
+    font-size: 24px; /* 较大的字号 */
+}
+
+.small-text {
+    font-size: 20px; /* 较小的字号 */
+}
+
+/* 添加轮播相关样式 */
+/* .welcome-slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.slider-container {
+    position: relative;
+    display: flex;
+    width: 200vw;
+    height: 100vh;
+    transform: translateX(0); 
+    will-change: transform; 
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    flex: 0 0 100vw;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slider-nav {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10002; 
+}
+
+.nav-btn:hover {
+    background: black;
+    color: white;
+}
+
+.corner-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 429px;
+    height: 97px;
+    border-right: 1.5px solid #000;
+    border-bottom: 1.5px solid #000;
+    overflow: hidden;
+    background-color: #fff;
+    transition: all 0.3s ease; 
+    z-index: 10000; 
+}
+
+#logo-image {
+    position: fixed;
+    width: 1728px;
+    height: 1028px;
+    top: 0;
+    left: 0;
+    z-index: 10001; 
+    cursor: pointer; 
+    pointer-events: none; 
+}
+
+.corner-box:hover #logo-image {
+    pointer-events: auto; 
+}
+
+.slider-info {
+    position: fixed;
+    top: 10px;
+    left: 429px;
+    width: 1461px;
+    height: 31px;
+    border-left: 1.5px solid #000;
+    border-bottom: 1.5px solid #000;
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+    font-size: 28px;
+    background-color: #fff;
+    z-index: 10000;
+    transition: all 0.3s ease;
+    cursor: pointer; 
+}
+
+.slider-info::before {
+    content: '';
+    position: absolute;
+    top: -10px; 
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #fff;
+    border-left: 0px solid #000;
+}
+
+.slider-info:hover {
+    font-size: 36px;
+    font-weight: bold;
+    height: 46px;
+} */

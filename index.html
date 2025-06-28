@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>yaki_archive</title>
+    <link rel="stylesheet" href="css/base.css">
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script>
+        (function(d) {
+        var config = {
+            kitId: 'bls1wpn',
+            scriptTimeout: 3000,
+            async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+    <style>
+        body, .top-bar, .info, .contact, .left-sidebar, .index-box, .index-list li, .secondary-page {
+            cursor: url('icon/cursor.png'), auto;
+        }
+        @font-face {
+            font-family: 'Source Han Sans';
+            src: url('fonts/SourceHanSerif-Regular.otf') format('opentype');
+            unicode-range: U+4E00-9FFF, U+3400-4DBF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF; /* 中日韩统一表意文字 */
+        }
+        
+    
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- 添加轮播界面 -->
+    <!-- <div class="welcome-slider">
+        <div class="slider-info">Pop Music cookbook</div>
+        <div class="slider-container">
+            <div class="slide"><img src="pic/cover1.png" alt=""></div>
+            <div class="slide"><img src="pic/cover2.png" alt=""></div>
+        </div>
+        <div class="slider-nav">
+            <button class="nav-btn prev">←</button>
+            <button class="nav-btn next">→</button>
+        </div>
+    </div> -->
+
+    <div class="corner-box">
+            <img src="icon/logo1.png" alt="Corner Image" id="logo-image" >
+    </div>
+
+    <div class="index-box">index</div>
+
+    <div class="left-sidebar">
+        <div class="index-list">
+            <ul id="index-list">
+                <li>
+                    葬梦 Funeral fantasy<br>
+                    (poster design,2025)<br>
+                    <br>
+                </li>
+                <li>
+                    嘉云 x 「西游记」‘东土大糖’<br>
+                    (poster design 2025)<br>
+                    <br>
+                </li>
+                <li>
+                    大便超人 Doodieman<br>
+                    (UI design,interactive game,2025)<br>
+                    <br>
+                </li>
+                <li>
+                    神偷大盗 Big thief, fabulous stealing<br>
+                    (logo design,typography,3D artwork,2024)<br>
+                    <br>
+                </li>
+                <li>
+                    饼饼<br>
+                    (character design,emoticon design,2024)<br>
+                    <br>
+                </li>
+                <li>
+                    青苔 Moss<br>
+                    (poster design,2024)<br>
+                    <br>
+                </li>
+                <li>
+                    luckin coffee x「山海经」<br>
+                    (package design,2024)<br>
+                    <br>
+                </li>
+                <li>
+                    Pop Music cookbook<br>
+                    (editorial design,2024)<br>
+                    <br>
+                </li>
+                <li>
+                    SoundOf2023<br>
+                    (editorial design,2023)<br>
+                    <br>
+                </li>
+                <li>
+                    The Light<br>
+                    (poster design,2022)<br>
+                    <br>
+                </li>
+                <li>
+                    SoundOfKpop<br>
+                    (editorial design,2022)<br>
+                    <br>
+                </li>
+                <li>
+                    SoundOf2021<br>
+                    (editorial design,2022)<br>
+                    <br>
+                </li>
+                <li>
+                    布谷不哭<br>
+                    (poster design,2021)<br>
+                    <br>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="top-bar">
+        <div class="info">info</div>
+        <div class="contact">contact</div>
+    </div>
+    <div class="container">
+        <div class="content" id="masonry-container">
+            <div class="image-container">
+                <img src="pic/proj15.png" alt="content Image" id="proj15" >
+                <div class="overlay">
+                    <span class="large-text"> 葬梦 Funeral fantasy_drama poster</span>
+                    <span class="small-text">
+                        poster design<br>
+                        2025<br>
+                    </span>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="pic/proj14.png" alt="content Image" id="proj14" >
+                <div class="overlay">
+                    <span class="large-text">嘉云 x 「西游记」‘东土大糖’_prodct poster</span>
+                    <span class="small-text">
+                        poster design<br>
+                        2025<br>
+                    </span>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="pic/proj13.png" alt="content Image" id="proj13" >
+                <div class="overlay">
+                    <span class="large-text">大便超人 Doodieman_app & unity interactive game</span>
+                    <span class="small-text">
+                        UI design,interactive game<br>
+                        2025<br>
+                    </span>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="pic/proj12.jpeg" alt="content Image" id="proj12" >
+                <div class="overlay">
+                    <span class="large-text"> 神偷大盗 Big thief, fabulous stealing_logo for film</span>
+                    <span class="small-text">
+                        logo design,typography,3D artwork<br>
+                        2024<br>
+                    </span>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="pic/proj11.png" alt="content Image" id="proj11" >
+                <div class="overlay">
+                    <span class="large-text">饼饼_character</span>
+                    <span class="small-text">
+                        character design,emoticon design<br>
+                        2024<br>
+                    </span>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="pic/proj10.jpg" alt="content Image" id="proj10" >
+                <div class="overlay">
+                    <span class="large-text">青苔 Moss_film poster</span>
+                    <span class="small-text">
+                        poster design<br>
+                        2024<br>
+                    </span>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="pic/proj1.png" alt="content Image" id="proj1" >
+                <div class="overlay">
+                    <span class="large-text">luckin coffee x 「山海经」_Co-branded product design</span>
+                    <span class="small-text">
+                        package design, poster<br>
+                        2024<br>
+                    </span>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="pic/proj2.png" alt="content Image" id="proj2" >
+                <div class="overlay">
+                    <span class="large-text">'Not Responsible for Your Stomach' _Pop Music Cookbook</span>
+                    <span class="small-text">
+                        editorial design <br>
+                        2024<br>
+                    </span>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="pic/proj3.png" alt="content Image" id="proj3" >
+                <div class="overlay">
+                    <span class="large-text">SoundOf2023_Kpop music summary</span>
+                    <span class="small-text">
+                        editorial design, poster<br>
+                        2023<br>
+                    </span>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="pic/proj5.png" alt="content Image" id="proj5" >
+                <div class="overlay">
+                    <span class="large-text">The Light_3English drama poster</span>
+                    <span class="small-text">
+                        poster<br>
+                        2022<br>
+                    </span>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="pic/proj6.jpg" alt="content Image" id="proj6" >
+                <div class="overlay">
+                    <span class="large-text">SoundOfKpop_music criticism layout</span>
+                    <span class="small-text">
+                        editorial design, poster<br>
+                        2022<br>
+                    </span>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="pic/proj7.jpg" alt="content Image" id="proj7" >
+                <div class="overlay">
+                    <span class="large-text">SoundOf2021_Kpop music summary</span>
+                    <span class="small-text">
+                        editorial design, poster<br>
+                        2022<br>
+                    </span>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="pic/proj8.png" alt="content Image" id="proj8" >
+                <div class="overlay">
+                    <span class="large-text">布谷不哭_microfilm poster</span>
+                    <span class="small-text">
+                        poster<br>
+                        2021<br>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page15" class="secondary-page">
+        <div class="image-section">
+            <img src="pic/proj15.png" alt="">
+        </div>
+        <div class="text-section">
+            <p>
+                葬梦 Funeral fantasy_drama poster<br>
+            </p>
+            <p>
+                poster design<br>
+                2025<br>
+            </p>
+        </div>
+    </div>
+    <div id="page14" class="secondary-page">
+        <div class="image-section">
+            <img src="pic/proj14.png" alt="">
+            <img src="pic/14-1.png" alt="">
+            <img src="pic/14-2.png" alt="">
+            <img src="pic/14-3.png" alt="">
+        </div>
+        <div class="text-section">
+            <p>
+                嘉云 x 「西游记」‘东土大糖 _Co-branded product&poster design<br>
+            </p>
+            <p>
+                poster design<br>
+                2025<br>
+            </p>
+        </div>
+    </div>
+    <div id="page13" class="secondary-page">
+        <div class="image-section">
+            <img src="pic/proj13.png" alt="">
+            <img src="pic/13-1.png" alt="">
+            <img src="pic/13-2.png" alt="">
+            <img src="pic/13-3.png" alt="">
+            <img src="pic/13-4.png" alt="">
+            <img src="pic/13-5.png" alt="">
+            <img src="pic/13-6.png" alt="">
+            <img src="pic/13-7.png" alt="">
+            <img src="pic/13-8.jpg" alt="">
+            <img src="pic/13-9.jpg" alt="">
+        </div>
+        <div class="text-section">
+            <p>
+                大便超人 Doodieman_app & unity interactive game<br>
+            </p>
+            <p>
+                UI design,interactive game<br>
+                2025<br>
+            </p>
+        </div>
+    </div>
+    <div id="page12" class="secondary-page">
+        <div class="image-section">
+            <img src="pic/proj12.jpeg" alt="">
+            <img src="pic/12-1.jpg" alt="">
+            <img src="pic/proj122.png" alt="">
+            <img src="pic/proj121.png" alt="">
+        </div>
+        <div class="text-section">
+            <p>
+                神偷大盗 Big thief, fabulous stealing_graphic design for film<br>
+            </p>
+            <p>
+                logo design,typography,3D artwork<br>
+                2024<br>
+            </p>
+        </div>
+    </div>
+    <div id="page11" class="secondary-page">
+        <div class="image-section">
+            <img src="pic/11-1.jpg" alt="">
+            <img src="pic/11-2.jpg" alt="">
+            <img src="pic/11-2.jpg" alt="">
+        </div>
+        <div class="text-section">
+            <p>
+                饼饼_character <br>
+            </p>
+            <p>
+                character design,emoticon design<br>
+                2024<br>
+            </p>
+        </div>
+    </div>
+    <div id="page10" class="secondary-page">
+        <div class="image-section">
+            <img src="pic/proj10.jpg" alt="">
+        </div>
+        <div class="text-section">
+            <p>
+                青苔 Moss_film poster <br>
+            </p>
+            <p>
+                poster design<br>
+                2024<br>
+            </p>
+        </div>
+    </div>
+    <div id="page1" class="secondary-page">
+        <div class="image-section">
+            <img src="pic/proj1.png" alt="">
+            <img src="pic/1-1.png" alt="">
+            <img src="pic/1-2.png" alt="">
+        </div>
+        <div class="text-section">
+            <p>
+                luckin coffee x 「山海经」_Co-branded product design <br>
+            </p>
+            <p>
+                leaflet design, poster <br>
+                2024<br>
+            </p>
+        </div>
+    </div>
+    <div id="page2" class="secondary-page">
+        <div class="image-section">
+            <img src="pic/proj2.png" alt="">
+            <img src="pic/2-1.png" alt="">
+            <img src="pic/2-2.png" alt="">
+        </div>
+        <div class="text-section">
+            <p>
+                'Not Responsible for Your Stomach' _Pop Music Cookbook <br>
+            </p>
+            <p>
+                editorial design <br>
+                2024 <br>
+            </p>
+        </div>
+    </div>
+    <div id="page3" class="secondary-page">
+        <div class="image-section">
+            <img src="pic/proj3.png" alt="">
+        </div>
+        <div class="text-section">
+            <p>
+                SoundOf2023_Kpop music summary <br>
+            </p>
+            <p>
+                editorial design, poster <br>
+                2023 <br>
+            </p>
+        </div>
+    </div>
+    <div id="page5" class="secondary-page">
+        <div class="image-section">
+            <img src="pic/proj5.png" alt="">
+            <img src="pic/5-1.png" alt="">
+            <img src="pic/5-2.png" alt="">
+        </div>
+        <div class="text-section">
+            <p>
+                The Light_3English drama poster <br>
+            </p>
+            <p>
+                poster <br>
+                2022 <br>
+            </p>
+        </div>
+    </div>
+    <div id="page6" class="secondary-page">
+        <div class="image-section">
+            <img src="pic/proj6.jpg" alt="">
+        </div>
+        <div class="text-section">
+            <p>
+                SoundOfKpop_music criticism layout <br>
+            </p>
+            <p>
+                editorial design, poster <br>
+                2022 <br>
+            </p>
+        </div>
+    </div>
+    <div id="page7" class="secondary-page">
+        <div class="image-section">
+            <img src="pic/proj7.jpg" alt="">
+            <img src="pic/7-1.png" alt="">
+            <img src="pic/7-2.jpg" alt="">
+            <img src="pic/7-3.png" alt="">
+        </div>
+        <div class="text-section">
+            <p>
+                SoundOf2021_Kpop music summary <br>
+            </p>
+            <p>
+                editorial design, poster <br>
+                2022 <br>
+            </p>
+        </div>
+    </div>
+    <div id="page8" class="secondary-page">
+        <div class="image-section">
+            <img src="pic/proj8.png" alt="">
+            <img src="pic/8-1.png" alt="">
+        </div>
+        <div class="text-section">
+            <p>
+                布谷不哭_microfilm poster <br>
+            </p>
+            <p>
+                poster <br>
+                2021 <br>
+            </p>
+        </div>
+    </div>
+
+    <div id="info-box" class="box">
+        <p>
+            Ruoxi YU <br>
+            Beijing, CN <br>
+            2023- , BA(digital media art), Communication University of China <br>
+        </p>
+    </div>
+    <div id="contact-box" class="box">
+        <p>
+            Email: yuruoxi3@gmail.com <br>
+            Tele: +86 13522169439 <br>
+            Instagram @yakiiy_y <br>
+        </p>
+    </div>
+
+    <script>
+        const indexList = document.querySelectorAll('#index-list li');
+        const images = document.querySelectorAll('.content img');
+        const pages = document.querySelectorAll('.secondary-page');
+        const logoImage = document.getElementById('logo-image');
+        const info = document.querySelector('.info');
+        const contact = document.querySelector('.contact');
+        const corner = document.querySelector('.corner-box');
+        const indexBox = document.querySelector('.index-box');
+        const infoBox = document.getElementById('info-box');
+        const contactBox = document.getElementById('contact-box');
+        const overlays = document.querySelectorAll('.overlay');
+        const welcomeSlider = document.querySelector('.welcome-slider');
+        const leftSidebar = document.querySelector('.left-sidebar');
+        
+        let infoBoxVisible = false;
+        let contactBoxVisible = false;
+        let cornerVisible = false;
+
+        function showPage(index) {
+            const isCurrentlyVisible = pages[index].style.display === 'flex';
+            hideAllPages();
+            if (!isCurrentlyVisible) {
+                pages[index].style.display = 'flex';
+            }
+        }
+
+
+        function hideAllPages() {
+            console.log("hideAllPages called");
+            pages.forEach(page => page.style.display = 'none');
+        }
+
+        indexList.forEach((item, index) => {
+            item.addEventListener('click', () => showPage(index));
+        });
+
+
+        overlays.forEach((overlay, index) => {
+            overlay.addEventListener('click', () => {
+                showPage(index);
+            });
+        });
+
+
+        corner.addEventListener('click', () => {
+            hideAllPages();
+            infoBox.style.display = 'none';
+            contactBox.style.display = 'none';
+        });
+
+        logoImage.addEventListener('click', () => {
+            console.log('Logo clicked!');  // 调试日志
+            welcomeSlider.style.display = 'none';
+            console.log('Welcome slider display style:', welcomeSlider.style.display);  // 调试日志
+        });
+
+        let highestZIndex = 1003; // 初始最高 z-index 值
+
+        function bringToFront(element) {
+            highestZIndex += 1;
+            element.style.zIndex = highestZIndex;
+        }
+
+        info.addEventListener('mouseover', () => {
+            infoBox.style.display = 'block';
+        });
+
+        info.addEventListener('mouseout', () => {
+            if (!infoBoxVisible) {
+                infoBox.style.display = 'none';
+            }
+        });
+
+        info.addEventListener('click', () => {
+            infoBoxVisible = !infoBoxVisible;
+            if (infoBoxVisible) {
+                infoBox.style.display = 'block';
+                bringToFront(infoBox); // 调用 bringToFront
+            } else {
+                infoBox.style.display = 'none';
+            }
+        });
+
+        contact.addEventListener('mouseover', () => {
+            contactBox.style.display = 'block';
+        });
+
+        contact.addEventListener('mouseout', () => {
+            if (!contactBoxVisible) {
+                contactBox.style.display = 'none';
+            }
+        });
+
+        contact.addEventListener('click', () => {
+            contactBoxVisible = !contactBoxVisible;
+            if (contactBoxVisible) {
+                contactBox.style.display = 'block';
+                bringToFront(contactBox); // 调用 bringToFront
+            } else {
+                contactBox.style.display = 'none';
+            }
+        });
+
+        indexBox.addEventListener('mouseover', () => {
+            indexBox.style.fontSize = '36px';
+            indexBox.style.fontWeight = 'bold';
+            indexBox.style.height = '46px';
+        });
+
+        indexBox.addEventListener('mouseout', () => {
+            indexBox.style.fontSize = '28px';
+            indexBox.style.fontWeight = 'normal';
+            indexBox.style.height = '35px';
+        });
+
+
+        if (window.innerWidth <= 740) { // 仅在小屏幕下生效
+            const leftSidebar = document.querySelector('.left-sidebar');
+            const indexBox = document.querySelector('.index-box');
+            let isClickToggled = false; // 标记是否处于点击状态
+
+            // 悬停时显示 left-sidebar
+            indexBox.addEventListener('mouseenter', () => {
+                if (!isClickToggled) {
+                    leftSidebar.style.display = 'block';
+                }
+            });
+
+            // 离开时隐藏 left-sidebar
+            indexBox.addEventListener('mouseleave', () => {
+                if (!isClickToggled) {
+                    leftSidebar.style.display = 'none';
+                }
+            });
+
+            // 点击切换 left-sidebar 显示/隐藏，并禁用悬停逻辑
+            indexBox.addEventListener('click', () => {
+                isClickToggled = !isClickToggled; // 切换点击状态
+                if (isClickToggled) {
+                    leftSidebar.style.display = 'block';
+                } else {
+                    leftSidebar.style.display = 'none';
+                }
+            });
+
+            // 确保鼠标离开 left-sidebar 也隐藏
+            leftSidebar.addEventListener('mouseleave', () => {
+                if (!isClickToggled) {
+                    leftSidebar.style.display = 'none';
+                }
+            });
+        }
+
+
+
+
+        // 轮播功能实现
+        document.addEventListener('DOMContentLoaded', function() {
+            const sliderContainer = document.querySelector('.slider-container');
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            const welcomeSlider = document.querySelector('.welcome-slider');
+            const logoImage = document.getElementById('logo-image');
+            const sliderInfo = document.querySelector('.slider-info');
+            
+            // 定义标题数组和对应的页面
+            const titles = [
+                " 'Not Responsible for Your Stomach' _Pop Music Cookbook ",
+                " 'yaki'_logo "
+            ];
+            
+            const pages = {
+                " 'Not Responsible for Your Stomach' _Pop Music Cookbook ": "page2",
+                " 'yaki'_logo ": "page4"
+            };
+            
+            let currentSlide = 0;
+            const slideCount = slides.length;
+            
+            function updateSlider() {
+                const translation = -currentSlide * 100;
+                sliderContainer.style.transform = `translateX(${translation}vw)`;
+                // 更新标题
+                sliderInfo.textContent = titles[currentSlide];
+            }
+            
+            // 添加 slider-info 点击事件
+            sliderInfo.addEventListener('click', () => {
+                const currentTitle = titles[currentSlide];
+                const pageId = pages[currentTitle];
+                if (pageId) {
+                    welcomeSlider.style.display = 'none';
+                    clearInterval(autoPlay);
+                    hideAllPages();
+                    document.getElementById(pageId).style.display = 'flex';
+                }
+            });
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slideCount;
+                sliderContainer.style.transition = 'transform 0.5s ease';
+                updateSlider();
+            }
+            
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+                sliderContainer.style.transition = 'transform 0.5s ease';
+                updateSlider();
+            }
+            
+            // 自动播放
+            let autoPlay = setInterval(nextSlide, 4000);
+                
+            // 点击事件
+            prevBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                clearInterval(autoPlay);
+                prevSlide();
+                autoPlay = setInterval(nextSlide, 4000);
+            });
+            
+            nextBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                clearInterval(autoPlay);
+                nextSlide();
+                autoPlay = setInterval(nextSlide, 4000);
+            });
+
+            // logo点击事件
+            logoImage.addEventListener('click', () => {
+                welcomeSlider.style.display = 'none';
+                clearInterval(autoPlay);
+            });
+
+            // 初始化显示
+            updateSlider();
+        });
+        window.addEventListener('load', () => {
+            const masonry = new Masonry('#masonry-container', {
+                itemSelector: '.image-container',
+                columnWidth: '.image-container',
+                percentPosition: true,
+                gutter: 16
+            });
+        });
+        // window.addEventListener('load', () => {
+        //     const images = document.querySelectorAll('.image-container img');
+        //     images.forEach(img => {
+        //         img.loading = 'lazy'; // 懒加载提升性能
+        //     });
+        // });
+
+
+
+
+
+    </script>
+</body>
+</html>
