@@ -500,6 +500,21 @@
             Instagram @yakiiy_y <br>
         </p>
     </div>
+    <div id="usage-hint" class="usage-hint">
+        <button id="close-hint" class="close-btn">×</button>
+        欢迎查看我的个人网页^^</br>
+        </br>
+        这里是一些使用规则：</br>
+        </br>
+        1、点击logo回到主页</br>
+        </br>
+        2、请随便点击页面查看更多内容</br>
+        </br>
+        3、顶部栏打开的内容需要二次点击来关闭</br>
+        </br>
+        4、如果能使用网页端,</br>
+        会发现更有意思的玩法哦!😍</br>
+    </div>
 
     <script>
         const indexList = document.querySelectorAll('#index-list li');
@@ -519,6 +534,16 @@
         let infoBoxVisible = false;
         let contactBoxVisible = false;
         let cornerVisible = false;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const usageHint = document.getElementById('usage-hint');
+            const closeHint = document.getElementById('close-hint');
+
+            // 关闭提示框
+            closeHint.addEventListener('click', () => {
+                usageHint.style.display = 'none';
+            });
+        });
 
         function showPage(index) {
             const isCurrentlyVisible = pages[index].style.display === 'flex';
