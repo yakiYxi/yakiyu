@@ -275,7 +275,7 @@ body:lang(en) {
     .container {
         position: fixed;
         top: 198.5px;
-        left: 0;
+        left: 45px;
         width: 100vw; /* 填充屏幕宽度 */
         z-index: 1;  /* 确保它在 secondary-page 下面 */
     }
