@@ -91,16 +91,12 @@ body:lang(en) {
     transition: all 0.3s ease; /* 添加过渡效果 */
 }
 
-.info:hover {
+.info:hover, .contact:hover {
     font-size: 48px; /* 悬停时的字号 */
     font-weight: bold; /* 将字体设置为粗体 */
     height: 46px; /* 增加26px的高度 */
 }
-.contact:hover {
-    font-size: 48px; /* 悬停时的字号 */
-    font-weight: bold; /* 将字体设置为粗体 */
-    height: 46px; /* 增加26px的高度 */
-}
+
 .contact {
     border-bottom: 1.5px solid #000;
 }
@@ -195,7 +191,7 @@ body:lang(en) {
     /* justify-content: center;
     align-items: center; */
     font-size: 18px;
-    overflow: hidden; /* Allow scrolling */
+    overflow-x: hidden; 
     z-index: 1000;
 }
 
@@ -214,7 +210,17 @@ body:lang(en) {
     transform: none; 
 }
 
-@media (max-width: 1520px) and (min-width: 941px) {
+.image-container .description {
+    display: none;
+    margin-top: -35px;
+    margin-right: -20px;
+    font-size: 16px; /* 文字大小 */
+    line-height: 1.1;
+    color: #000000; /* 文字颜色 */
+}
+
+
+@media (max-width: 1520px){
     .secondary-page .image-section img {
         width: 80%; 
     }
@@ -226,44 +232,80 @@ body:lang(en) {
     }
 }
 @media (max-width: 740px) {
+    .image-container .description {
+        display: block;
+    }
+    .corner-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 343.2px; 
+        height: 77.6px; 
+    }
+    #logo-image {
+        transform: scale(0.8);
+        transform-origin: top left;
+    }
+    .corner-box:hover #logo-image {
+        transform: scale(0.8) ;
+    }
+
     /* 1. info 栏固定在 corner-box 下面 */
     .info {
         position: fixed;
-        top: 97px;                /* corner-box 的高度 */
-        left: 0;                  /* 紧贴页面左边缘 */
-        width: 400px;              /* 根据需要也可以改成原来的宽度 */
+        top: 77.6px;                /* corner-box 的高度 */
+        left: 120px;                  /* 紧贴页面左边缘 */
+        width: 80px;
+        height: 24.8px; 
         display: flex;
         border-right: 1.5px solid #000;
+        border-top: 1.5px solid #000;
         z-index: 1000;
+        font-size: 22px;
     }
 
     /* 2. contact 栏固定在 info 下面 */
     .contact {
         position: fixed;
-        top: calc(97px + 32.5px);   /* corner-box 高度 + info 高度 */
-        left: 0;
-        width: 400px;
+        top: 71.6px;   /* corner-box 高度 + info 高度 */
+        left: 207px;
+        width: 153px !important;
+        height: 29px;
+        padding-top: 2px;
         display: flex;
         border-right: 1.5px solid #000;
+        border-top: 1.5px solid #000;
         z-index: 999;
+        font-size: 22px;
+    }
+    .info:hover, .contact:hover, .index-box:hover {
+        font-size: 38px !important; /* 悬停时的字号 */
+    }
+    .index-box:hover {
+        width: 105px !important;
+        height: 48px !important; 
     }
 
-    /* 3. index-box 固定在 contact 下面 */
     .index-box {
         position: fixed;
-        top: 162px; 
-        left: 0;
-        width: 350px;                /* 或者保持原来的 350px，根据布局调整 */
+        top: 77.6px; 
+        left: 15px;
+        width: 105px;
+        height: 25px !important; 
         z-index: 998;
+        font-size: 22px!important;
+        /* padding-top: 7px; */
         border-right: 1.5px solid #000;
         border-left: 1.5px solid #000;
+        border-top: 1.5px solid #000;
     }
     .left-sidebar {
+        transform: scale(0.7);
         position: fixed; /* 保持固定定位 */
-        top: 198px; /* corner-box + info + contact */
-        left: 5px;
-        width: 340px;
-        height: calc(100vh - 97px - 33px * 2); /* 页面高度减去 header 的高度 */
+        top: 103.9px; /* corner-box + info + contact */
+        left: 18px;
+        /* width: 340px;
+        height: calc(100vh - 97px - 33px * 2);  */
         background-color: #fff; /* 确保有背景色 */
         z-index: 997; /* 保证在 container 和二级页面上层 */
         border-right: 1.5px solid #000;
@@ -274,18 +316,17 @@ body:lang(en) {
 
     .container {
         position: fixed;
-        top: 198.5px;
+        top: 128.5px;
         left: 45px;
         width: 100vw; /* 填充屏幕宽度 */
         z-index: 1;  /* 确保它在 secondary-page 下面 */
     }
     .secondary-page {
         position: fixed !important;
-        top: 198.5px !important;
+        top: 128.5px !important;
         left: 0 !important;
         width: 100vw !important;
         z-index: 2 !important;
-        /* display: none !important; */
     }
     .secondary-page .image-section img {
         width: 100%; 
@@ -293,8 +334,8 @@ body:lang(en) {
     .secondary-page .text-section {
         width: 500px !important;
         max-width: 100%;
-        word-wrap: break-word; /* 自动换行，避免文字溢出 */
-        white-space: normal; /* 强制内容换行 */
+        word-wrap: break-word;
+        white-space: normal;
     }
     .box {
         top: 0 !important;
@@ -302,17 +343,18 @@ body:lang(en) {
     }
     #info-box {
         position: fixed !important;
-        top: 129.5px !important;
-        left: 44px !important;
+        transform: scale(0.8);
+        top: 60px !important;
+        left: 60px !important;
     }
     #contact-box {
-        position: fixed !important;
-        top: 162px !important;
-        left: 18px !important;
-
+        position: fixed ;
+        transform: scale(0.8);
+        top: 81.9px !important;
+        left: 25px !important;
     }
+    
 }
-
 
 .secondary-page {
     position: relative;
@@ -479,6 +521,9 @@ body:lang(en) {
     cursor: pointer;
     color: black;
 }
+
+
+
 
 /* 添加轮播相关样式 */
 /* .welcome-slider {
